@@ -1,0 +1,28 @@
+@import url("../template.css");
+
+
+form {
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0
+}
+
+form :nth-child(n) {
+    outline: none;
+    background-color: white;
+    border: none;
+    font-family: 'Fondamento', cursive;
+    font-size: 20px;
+    padding: 5px;
+    margin: 20px;
+    color: black;
+    letter-spacing: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+form input:focus {
+    border-bottom: 1px solid #C0C0C0;
+}
+
+#message {
+    border: 1px solid #C0C0C0;
+}
