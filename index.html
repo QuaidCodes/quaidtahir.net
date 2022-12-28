@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pages/template.css">
+    <link rel="icon" type="image/x-icon" href="/images/masjid-favicon.png">
+    <title>Quaid Tahir</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><span>00. </span><a href="#Home">Home</a></li>
+                <li><span>01. </span><a href="#Projects">Projects</a></li>
+                <li><span>02. </span><a href="#Papers">Papers</a></li>
+                <li><span>03. </span><a href="#Contact">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="relative none">
+            <button class="theme" id="theme">Light Mode</button>
+        </div>
+        
+        <section id="Home">
+            <h1>Quaid Tahir</h1>
+            <p>Software Engineer</p>
+            <button class="portfolio-button" onclick="portfolio()">Portfolio</button>
+        </section>
+
+        <section id="Projects">
+            <h1>Projects</h1>
+            <h2>Coming Soon</h2>
+        </section>
+
+        <section id="Papers">
+            <h1>Papers</h1>
+            <h2>Features</h2>
+
+            <div class="paper-items">
+                <div class="paper-cards">
+                    <a href="pages/papers/papers.html" target="_blank" >
+                        <img src="images/HigherEducation.png" alt="Higher Education paper">
+                        <h3><u>Higher Studies</u></h3>
+                        <p>Education is one of, if not the most important part of a person's life. Most of the populace spends approximately a quarter of their lives in pursuit of a degree; a qualification provided to students upon completion of a course of study...</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="Contact">
+            <a href="https://www.instagram.com/quaidcodes/" target="_blank">Instagram</a> 
+            <a href="https://linkedin.com/in/quaid-tahir-5a3057173/" target="_blank">LinkedIn</a> 
+            <a href="https://twitter.com/quaid_tahir" target="_blank">Twitter</a> 
+            <a href="https://github.com/QuaidCodes" target="_blank">GitHub</a>
+            <a href="mailto: quaidtahirw@gmail.com">Email</a>
+            <a href="#Form" id="show-form" style="display: none;">Contact</a>
+        </section>
+
+
+        <section id="Form">
+            <form action="pages/contact.php" class="flex-center-center-column" autocomplete="off">
+                <input type="text" name="fName" placeholder="First Name">
+                <input type="text" name="lName" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" id="message" cols="20" rows="10" placeholder="Your Message"></textarea>
+
+                <input type="submit" name="submit" placeholder="Submit" id="submit-btn" href="#Contact">
+            </form>
+        </section>
+
+        <!-- <section id="FormSuccess">
+            <h1 class="flex-center-center">Your email has been sent.</h1>
+        </section> -->
+
+        <div class="relative">
+            <div class="copyright">
+                &copy;2022 Quaid Tahir.
+                All rights reserved.</div>
+            </div>
+        </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
