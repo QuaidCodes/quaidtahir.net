@@ -1,0 +1,413 @@
+html{
+    font-family: 'Oswold', sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+.italicize{
+    font-style: italic;
+}
+.divider{
+    display: none;
+    border-bottom: 1px solid #00204a;
+}
+/* Nav Bar */
+.nav-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    z-index: 88;
+}
+.on-scroll-nav{
+    position: sticky;
+    background-color: black;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.logo{
+    font-family: 'Rubik Distressed', cursive;
+    font-size: 26px;
+    color: #ffd700;
+    display: none;
+}
+
+.nav-container{
+    font-size: 20px;
+    color: white;
+}
+
+.nav-items{
+    position: relative;
+    margin-right: 20px;
+    color: white;
+    font-size: 16px;
+}
+.nav-items::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+.nav-items:hover::before{ 
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .nav-bar {
+        padding: 6px;
+    }
+    
+    .nav-container {
+        font-size: 13px;
+        justify-content: right;
+    }
+
+    .on-scroll-nav a{
+        font-size: 13px;
+        margin-right: 7px;
+    }
+
+    .logo {
+        font-size: 17px;
+        padding-right: 6px;
+    }
+
+
+}
+
+/* Nav Bar End */
+
+/* Hero Section End */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#hero{
+    background-image: url("images/homepage.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    animation: greeting_text .5s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: greeting_box 1s ease;
+    animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease;
+    transition-property: background-color color;
+}
+#hero .cta:hover{
+    color: white;
+    background-color: crimson;
+}
+@media only screen and (max-width: 768px){
+    #hero h1{
+        font-size: 30px;
+    }
+    #hero .cta{
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+}
+/* Hero Section End */
+
+/* Portfolio Section Start */
+.portfolio{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    margin: 50px 100px;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 7px 5px 5px gray;
+    position: relative;
+}
+
+.header-hover{
+    color:white;
+}
+.header-hover:hover{
+    text-decoration: underline;
+}
+
+.spacer{
+    padding-left: 20px;
+}
+.spacer h1{
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    color: #1a2639;
+    padding: 5px;
+}
+
+.page-num{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: flex;
+    justify-content: right;
+    font-family: 'Tillana', cursive;
+}
+
+.page-num span{
+    font-size: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.page-num span:hover {
+    color: #990066;
+}
+
+.a-link{
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    color: black;
+}
+.titles{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.titles a:hover{
+    color: #022F88; 
+    text-decoration: underline;  
+}
+.titles .WIP:hover{
+    color: #990066;
+}
+
+.github{
+    display: inline-block;
+    background-image: url("images/github.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+.github:hover{
+    background-image: url("images/githubHover.png");
+}
+
+#contact-info p{
+    line-height: 25px;
+    padding-right: 30px;
+}
+
+#portfolio li{
+    list-style-type: square;
+}
+
+.edu-items{
+    margin-bottom: 5px;
+}
+
+.download-links{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.download-links p{
+    padding: 10px;
+}
+.download-links a{
+    color: black;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #1a2639;
+    border-radius: 7px;
+    transition: 0.5s ease;
+}
+.download-links a:hover{
+    color: white;
+    background-color: #1a2639;
+}
+@media only screen and (max-width: 768px){
+    #portfolio{
+        margin: 30px;
+        padding: 5px;
+    }
+    #portfolio h1{
+        font-size: 20px;
+    }
+    #contact-info p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    #portfolio li{
+        font-size: 12px;
+    }
+
+    .personality p{
+        font-size: 12px;
+    }
+
+    .download-links{
+        display: block;
+    }
+    .download-links p{
+        text-align: center;
+        font-size: 13px;
+        padding: 1px;
+    }
+    .download-links a{
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        padding: 2px 2px;
+        border: 1px solid #022F88;
+    }
+    .download-links a:nth-child(2){
+        border-bottom: none;
+    }
+}
+/* Portfolio Section End */
+
+ /* Social Handles start */
+ .container-socials{
+     display: flex;
+     justify-content: center;
+     margin: 5px 0;
+ }
+
+.twitter img:hover{
+    transition: 0.3s ease;
+    background-image: url("images/twitter-hover.png");
+}
+
+.instagram{
+    background-image: url("images/instagram.png");
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.instagram:hover{
+    background-image: url('images/instagram-hover.png');
+}
+
+.facebook{
+    background-image: url('images/facebook.png');
+    height: 50px;
+    width: 50px; 
+    transition: 0.3s ease;
+}
+.facebook:hover{
+    background-image: url('images/facebook-hover.png');
+}
+ /* Social Handles end */
+ 
+@media only screen and (max-width: 768px){
+    .about-me{
+        margin: 30px;
+        padding: 5px;
+    }
+    .profile{
+        padding: 0 5px;
+    }
+    .profile h1{
+        font-weight: 100;
+    }
+}
+/* Profile end */
+
+/* Keyframes */
+    @keyframes greeting_box{
+        50%{
+            width: 100%;
+            left: 0;
+        }
+        100%{
+            width: 0;
+            left: 100%;
+        }
+    }
+    @keyframes greeting_text{
+        100%{
+            color: white;
+        }
+    }
+/* End Keyframes */
+
+/* add a keyframe for each name letter "Q u a i d" as a different color after the greeting_text keyframe has taken place */
