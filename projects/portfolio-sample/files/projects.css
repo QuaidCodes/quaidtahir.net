@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sample{
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.item a{
+    color: black;
+    font-size: 22px;
+}

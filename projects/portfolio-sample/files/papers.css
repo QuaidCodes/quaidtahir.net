@@ -1,0 +1,35 @@
+.bold{
+    font-weight: bold;
+}
+
+.italics{
+    font-style: italic;
+}
+
+.container{
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.title{
+    font-size: 64px;
+}
+
+.essays{
+    margin: 20px;
+}
+
+.heading{
+    padding: 10px;
+}
+
+p{
+    text-align: left;
+    padding: 10px;
+}

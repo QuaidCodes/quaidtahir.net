@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Quaid Tahir">
+    <meta name="keywords" content="Portfolio, Quaid Tahir, QuaidTahir, Quaid_tahir, quaid, Quaid"> 
+    <meta name="description" content="Quaid Tahir's Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-king.png" type="image/png">
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="files/boiler.css">
+    <title>Quaid Tahir</title>
+</head>
+<body>
+
+    <!--Nav Bar -->
+    <nav class="nav-bar">
+        <div class="logo">Quaid Tahir</div>
+        <div class="nav-container">
+            <a href="files/papers.html" class="nav-items">Papers</a>
+            <a href="files/3d-art.html"class="nav-items">3d art</a>
+            <a href="files/projects.html"class="nav-items">Projects</a>
+            <a href="files/contact.php" class="nav-items">Contact Me</a>
+        </div>    
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Hello World(); <span></span></h1>
+                <h1>This is Quaid Tahir; <span></span></h1>
+                <a href="https://www.linkedin.com/in/quaid-tahir-5a3057173/" type="button" class="cta" target="_blank">Linkedin</a>
+                <a href="#anchor-portfolio" type="button" class="cta">Portfolio</a>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Portfolio section start -->
+    <span id="anchor-portfolio-1"></span>
+    <div class="portfolio">
+
+        <div id="header-portfolio">
+            <div id="contact-info">
+                <h1 id="portfolio-title">Quaid Tahir</h1>
+                <p id="address"></p>
+                <p><a href="mailto:quaidtahirw@gmail.com" id="email" class="header-hover"></a></p>
+                <p ><a href="#" id="website" class="header-hover"></a></p>
+            </div>
+        </div>
+        
+        <div class="spacer">
+        <div id="experience">
+            <h1>Experience</h1>
+            <h3><u>Titles</u></h3>
+            <div class="titles">
+                <a href="#" class="a-link">www.quaidtahir.net</a>
+                <a href="https://www.quaidtahir.link/" class="a-link" target="_blank">www.quaidtahir.link</a>
+                <a href="#" class="a-link WIP">www.quaidhaniftahir.com (Work-in-progress)</a>
+                <a href="#" class="a-link WIP">www.quaidtahir.com (Work-in-progress)</a>
+            </div>
+            
+            <ul>        
+                <li>Utilized HTML, CSS and Javascript to develop an interactive and responsive front-end.</li>
+
+                <li>
+                    GitHub <a href="https://github.com/QuaidTahir" class="github" target="_blank" title="GitHub"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="education">
+            <h1 id="">Education</h1>
+                <ul>
+                    <li>
+                        <div class="edu-items">
+                            <p>Queensborough Community College</p>
+                            <p>Associate's in Computer Sciences</p>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+
+        <div id="languages">
+            <h1>Languages</h1>
+            <ol>
+                <li>C++</li>
+                <li>Python</li>
+                <li>Php</li>
+                <li>Javascript</li>
+                <li>HTML/CSS</li>
+            </ol>
+        </div>
+        
+        <div class="page-num"><span class="page-nav"><a href="#anchor-portfolio-2">&#8594;</a></span></div>
+        
+    </div>
+</div>
+
+
+<div class="portfolio spacer">
+    <span id="anchor-portfolio-2"></span>
+        <div class="projects">
+        </div>
+        
+        <div class="page-num">
+            <span><a href="#anchor-portfolio-1">&#8592;</a></span>
+        </div>
+
+        <div class="download-links">
+            <p>Download: </p>
+            <a href="docs/Portfolio.pdf">Portfolio.pdf</a>
+            <a href="docs/Portfolio.docx">Portfolio.docx</a>
+        </div>
+    </div>
+    <!-- Portfolio section end -->
+
+    <!-- Social handles start -->
+    <div class="divider"></div>
+
+    <div class="container-socials">
+        <div class="twitter" title="Twitter">
+            <a href="https://twitter.com/quaid_tahir" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+        </div>
+
+        <a href="https://www.instagram.com/quaid_tahir/" target="_blank" title="Instagram">
+            <div class="instagram"></div>
+        </a>
+        
+        <a href="https://www.facebook.com/profile.php?id=100082115559774" target="_blank" title="Facebook">
+            <div class="facebook"></div>
+        </a>
+    </div>
+    <!-- Social handles end -->
+
+    <!-- <div class="music">
+        <audio src="../docs/BathSalt-ASAP.mp3" controls muted controlsList="nodownload"></audio>
+    </div> -->
+
+    <script>
+        window.addEventListener('scroll', ()=> {
+            document.querySelector('.nav-bar').classList.toggle('on-scroll-nav', window.scrollY > 0)
+                if(window.scrollY == 0)
+                    document.querySelector('.logo').style.display = 'none';
+                else
+                    document.querySelector('.logo').style.display = 'block';
+        });
+
+
+        const portfolio = {
+            name : document.getElementById('portfolio-title'),
+            address : document.getElementById('address'),
+            email : document.getElementById('email'),
+            website : document.getElementById('website'),
+            gradSchool : document.getElementById('grad-school'),
+            // masterSchool : document.getElementById('masters-school'),
+            // phdSchool : document.getElementById('phd-school')
+        };
+
+        // Portfolio section elements
+        const headerPortfolio = document.getElementById('header-portfolio');
+        const educaton = document.getElementById('education');
+
+        // Portfolio initialization
+        portfolio.name.innerHTML = "Quaid Tahir";   
+        portfolio.address.innerHTML = "New Jersey, US";
+        portfolio.email.innerHTML = "quaidtahirw@gmail.com";
+        portfolio.website.innerHTML = "www.quaidtahir.net";
+        // portfolio.masterSchool.innerHTML = "Hunter College"; 
+        // portfolio.phdSchool.innerHTML = "Hunter College";
+
+        // Header Styling
+        headerPortfolio.style.backgroundColor = "#1a2639";
+        headerPortfolio.style.color = "white";
+        headerPortfolio.style.padding = "10px";
+        headerPortfolio.style.fontSize = "17px";
+
+
+        // ----------Portfolio styling End
+
+        //-----------Profile section start
+        //const profile = document.querySelector('.profile').addEventListener('click', () => {
+        //    document.querySelector('.arrow-up').classList.toggle('arrow-down');
+        //    document.querySelector('.about-me-content').classList.toggle('toggle-display');
+        //});        
+        //-----------Profile section end
+    </script>
+</body>
+</html>
